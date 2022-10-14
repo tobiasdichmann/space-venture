@@ -1,0 +1,173 @@
+@import '../variables/colors';
+
+.navbar-admin {
+  padding: 0 8rem;
+  color: #fff;
+  background-color: $darkBlue;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+
+  // BURGER-TOGGLE-BUTTON
+  .toggle-btn {
+    height: 25px;
+    width: 32px;
+    position: absolute;
+    top: 0.8rem;
+    left: 2rem;
+    cursor: pointer;
+    display: none; // Showing with flex in media!
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      transition: all 0.4s ease;
+      transform-origin: left;
+    }
+
+    // Transform to 'X' on click
+    &.change .bar1 {
+      transform: rotate(45deg);
+    }
+
+    &.change .bar2 {
+      opacity: 0;
+    }
+
+    &.change .bar3 {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // THE MENU
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    align-items: center;
+
+    li {
+      transition: padding 1s ease;
+
+      display: flex;
+      align-items: center;
+
+      &:hover, .active {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-top: 2px solid $lightBlue;
+      }
+    }
+
+    a, .welcome-txt {
+      padding: 1rem 2rem;
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+    }
+
+    form {
+      input {
+        height: 30px;
+        padding-left: 5px;
+
+        &:focus {
+          border: 2px solid $lightBlue;
+          outline: none;
+        }
+      }
+
+      button {
+        height: 30px;
+        width: 50px;
+        margin-left: 5px;
+        color: white;
+        background-color: $lightBlue;
+        border: none;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+
+  .welcome-txt {
+    button {
+      padding: 6px;
+      color: white;
+      background-color: $lightBlue;
+      border: none;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
+
+/* ------------ TABLET ------------ */
+@media (max-width: 1600px) {
+  .navbar-admin {
+    padding: 26px 2rem;
+
+    flex-direction: column;
+    align-items: flex-end;
+
+    .toggle-btn {
+      // Show burger
+      display: flex;
+    }
+
+    // The Menu
+    .navbar-links-admin {
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+      transition: height 0.4s ease;
+
+      &.active {
+        height: 350px;
+      }
+    }
+
+    ul {
+      width: 100%;
+      padding: 1rem 0;
+      flex-direction: column;
+
+      li {
+        text-align: center;
+        transition-duration: 0.5s;
+
+        &:hover {
+          padding-left: 1.3rem;
+        }
+      }
+
+      a {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  .social-media {
+    position: absolute;
+    top: 18px;
+  }
+}

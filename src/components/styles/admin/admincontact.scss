@@ -1,0 +1,155 @@
+#adminContact {
+  padding: 50px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #adminContactContent {
+    width: 60vw;
+    padding: 40px;
+    box-shadow: 5px 5px 20px 2px #888888;
+    text-align: center;
+
+    display: grid;
+
+    h1 {
+      padding-bottom: 10px;
+      
+      position: relative;
+      right: 34px;
+    }
+
+    .contact-gr {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      
+      .message-gr {
+        display: flex;
+        align-items: center;
+
+        .message-info {
+          table {
+            width: 15rem;
+            padding: 15px 0;
+            border: 1px solid black;
+
+            h2 {
+              font: {
+                size: 1.8rem;
+              }
+            }
+
+            h3 {
+              font: {
+                size: 1.2rem;
+                weight: 100;
+              }
+            }
+
+            h4 {
+              font: {
+                size: 1.2em;
+                weight: 100;
+              }
+            }
+
+            h5 {
+              font: {
+                size: 0.8rem;
+                weight: 100;
+              }
+            }
+          }
+        }
+        
+        p:last-child {
+          text-align: left;
+        }
+      }
+
+      p {
+        padding: 10px 20px;
+      }
+
+      hr {
+        margin: 10px 0;
+
+        grid-column: 1/-1;
+      }
+    }
+  }
+}
+
+/* --------------- TABLET --------------- */
+@media only screen and (max-width: 992px) {
+  #adminContact {
+    #adminContactContent {
+      width: 95vw;
+    }
+  }
+}
+
+/* --------------- MOBILE --------------- */
+@media only screen and (max-width: 600px) {
+  #adminContact {
+    padding: 0;
+
+    #adminContactContent {
+      width: 100vw;
+      box-shadow: none;
+
+      .contact-gr {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        align-items: center;
+        
+        .message-gr {
+          flex-direction: column;
+          
+          .message-info {
+            table {
+              min-width: 100%;
+              padding: 15px 0;
+              border: 1px solid black;
+  
+              h2 {
+                font: {
+                  size: 1.6rem;
+                }
+              }
+  
+              h3 {
+                font: {
+                  size: 1rem;
+                  weight: 100;
+                }
+              }
+  
+              h4 {
+                font: {
+                  size: 1rem;
+                  weight: 100;
+                }
+              }
+  
+              h5 {
+                font: {
+                  size: 0.6rem;
+                  weight: 100;
+                }
+              }
+            }
+          }
+        }
+
+        a {
+          padding: 10px 0;
+          display: block;
+        }
+      }
+    }
+  }
+}

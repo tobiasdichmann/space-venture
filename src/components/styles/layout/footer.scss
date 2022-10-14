@@ -1,0 +1,155 @@
+@import '../variables/colors';
+
+.footer1 {
+    padding: 50px 8rem;
+    color: white;
+    background-color: $darkBlue;
+
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+        padding-bottom: 20px;
+        font: {
+            size: 1.5rem;
+            weight: 100;
+        }
+    }
+
+    p {
+        padding: 10px 0;
+        font: {
+            size: 1.2rem;
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        transition-duration: 0.3s;
+
+        &:hover {
+            color: $lightBlue;
+        }
+
+        .icon {
+            margin-right: 10px;
+            color: $lightBlue;
+        }
+    }
+
+    .links {
+        ul {
+            color: $lightBlue;
+            position: relative;
+            left: 16px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            li {
+                padding: 10px 50px 10px 0;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 20px 30px;
+            color: white;
+            background-color: $lightBlue;
+            cursor: pointer;
+            transition-duration: 0.3s;
+
+            &:hover {
+                background-color: #12b9a0;
+            }
+        }
+    }
+}
+
+.footer2 {
+    padding: 40px 8rem;
+    background-color: $darkestBlue;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    p {
+        color: grey;
+
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+    }
+
+    .social-media-footer {
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        justify-self: center;
+
+        a {
+            padding: 5px;
+            color: grey;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+      
+            &:hover {
+              color: $lightBlue;
+            }
+          }
+    }
+}
+
+/* --------------- TABLET --------------- */
+@media only screen and (max-width: 996px) {
+    .footer1 {
+        padding: 0 8rem;
+        text-align: center;
+
+        flex-direction: column;
+
+        h3 {
+            padding-top: 50px;
+        }
+
+        .links {
+            ul {                
+                li {
+                    padding: 10px 50px 10px 0;
+                }
+            }
+        }
+    }
+
+    .footer2 {    
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    
+        p {
+            grid-row: 2/-1;
+            justify-self: center;
+        }
+    
+        .social-media-footer {
+            padding-bottom: 20px;
+
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+    }
+}
+
+/* --------------- MOBILE --------------- */
+@media only screen and (max-width: 600px) {
+    .footer1 {
+        padding: 0 2rem;
+
+        h3 {
+            padding-top: 50px;
+        }
+    }
+
+    .footer2 {
+        padding: 10px 2rem;
+    }
+}

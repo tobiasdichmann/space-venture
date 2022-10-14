@@ -1,0 +1,70 @@
+:root {
+  --bordercolor: rgb(176, 184, 176);
+  --background: rgb(227, 250, 230);
+  --textcolor: black;
+  --overlaycolor: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+.popup-bg-overlay {
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlaycolor);
+  pointer-events: all; // So that you cannot click on anything behind the overlay
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popup {
+    position: fixed;
+    z-index: 10;
+    width: 500px;
+    max-width: 80%;
+    padding: 10px 15px;
+    border: 1px solid var(--bordercolor);
+    border-radius: 10px;
+    background-color: var(--background);
+    color: var(--textcolor);
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      align-items: center;
+      border-bottom: 1px dashed var(--bordercolor);
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .close {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .body {
+      padding: 10px 0;
+    }
+  }
+}

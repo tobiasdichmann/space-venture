@@ -1,0 +1,160 @@
+@import '../variables/colors';
+
+#newsletter {
+    margin: 40px 0;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    img {
+        max-height: 400px;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(80%);
+
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+    }
+
+    .newsletter-content {
+        z-index: 1;
+        
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        align-self: center;
+
+        h2 {
+            color: white;
+            font: {
+                size: 4rem;
+            }
+        }
+
+        h4 {
+            color: white;
+            font: {
+                size: 2rem;
+            }
+        }
+
+        p {
+            padding: 20px 0 30px 0;
+            color: white;
+            font: {
+                size: 1rem;
+                weight: 100;
+            }
+            letter-spacing: 1px;
+        }
+
+        input {
+            height: 60px;
+            width: 20%;
+            padding-left: 20px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.30);
+            border: none;
+
+            &::placeholder {
+                color: white;
+            }
+
+        }
+
+        button {
+            height: 60px;
+            margin-left: 5px;
+            padding: 0 30px;
+            color: white;
+            background-color: $lightBlue;
+            border: none;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+
+            &:hover {
+                background-color: black;
+            }
+        }
+    }
+}
+
+/* --------------- TABLET --------------- */
+@media only screen and (max-width: 996px) {
+    #newsletter {    
+        .newsletter-content {    
+            h2 {
+                font: {
+                    size: 2.5rem;
+                }
+            }
+    
+            h4 {
+                font: {
+                    size: 1.2rem;
+                }
+            }
+    
+            p {
+                font: {
+                    size: 1.2rem;
+                    weight: 100;
+                }
+            }
+    
+            input {
+                height: 60px;
+                width: 60%;
+            }
+
+            button {
+                width: 20%;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/* --------------- MOBILE --------------- */
+@media only screen and (max-width: 600px) {
+    #newsletter {
+        img {
+            height: 500px;
+        }
+    
+        .newsletter-content {    
+            h2 {
+                font: {
+                    size: 3rem;
+                }
+            }
+    
+            h4 {
+                padding: 20px 2rem;
+                font: {
+                    size: 1.5rem;
+                }
+            }
+    
+            p {
+                padding: 20px 2rem;
+                font: {
+                    size: 1.5rem;
+                    weight: 100;
+                }
+            }
+    
+            input {
+                height: 60px;
+                width: 90%;
+            }
+
+            button {
+                width: 90%;
+                margin-top: 10px;
+            }
+        }
+    }
+}

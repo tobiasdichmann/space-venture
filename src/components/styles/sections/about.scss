@@ -1,0 +1,70 @@
+@import '../variables/colors';
+
+#about {
+    padding: 20px 8rem;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+    .about-content {
+        align-self: center;
+
+        h2 {
+            padding-bottom: 20px;
+            font: {
+                size: 2.5rem;
+            }
+        }
+
+        h3 {
+            padding-bottom: 5px;
+            color: $lightBlue;
+            text-transform: uppercase;
+        }
+
+        p {
+            padding: 25px 0;
+        }
+        
+            button {
+                padding: 15px 40px;
+                color: white;
+                background-color: $lightBlue;
+                border: none;
+                cursor: pointer;
+                transition-duration: 0.3s;
+                transition-timing-function: ease;
+                
+    
+                &:hover {
+                    padding: 20px 45px;
+                    color: black;
+                    background-color: white;
+                    border: 1px solid black;
+                }
+            }
+    }
+}
+
+/* --------------- TABLET --------------- */
+@media only screen and (max-width: 1100px) {
+    #about {
+        padding: 40px 8rem;
+
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* --------------- MOBILE --------------- */
+@media only screen and (max-width: 600px) {
+    #about {
+        padding: 40px 2rem;
+    }
+}
