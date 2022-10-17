@@ -13,6 +13,10 @@ import ErrorComp from "../ErrorComp";
 import BannerSpaceship from '../../assets/img/banner-spaceship.jpg';
 
 const Rumfærgen = () => {
+  useEffect(() => {
+    document.title = 'Rumfærgen';
+  });
+
   const [spacecraft, setSpacecraft] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

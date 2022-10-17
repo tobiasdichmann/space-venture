@@ -15,6 +15,10 @@ import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { GrAdd } from "react-icons/gr";
 
 const AdminTours = () => {
+  useEffect(() => {
+    document.title = 'Ture';
+  });
+
   const [tours, setTours] = useState(); // Data/Text that the user can edit
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

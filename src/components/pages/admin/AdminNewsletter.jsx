@@ -13,6 +13,10 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { BiMailSend } from "react-icons/bi";
 
 const AdminNewsletter = () => {
+  useEffect(() => {
+    document.title = 'Nyhedsbrev';
+  });
+
   const [subscriped, setSubscriped] = useState(); // Data/Text that the user can edit
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

@@ -13,6 +13,10 @@ import ErrorComp from "../ErrorComp";
 import BannerSafety from '../../assets/img/banner-ture.jpg';
 
 const Tours = () => {
+  useEffect(() => {
+    document.title = 'Sikkerhed';
+  });
+
   const [safety, setSafety] = useState()
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

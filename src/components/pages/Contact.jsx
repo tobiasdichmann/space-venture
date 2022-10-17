@@ -10,6 +10,10 @@ import ErrorComp from '../ErrorComp';
 import Map from '../Map';
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = 'Kontakt';
+  });
+
   const [userMessage, setUserMessage] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

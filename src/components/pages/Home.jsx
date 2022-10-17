@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 // COMPONENTS
 import Slider from '../Slider'
@@ -10,6 +10,10 @@ import Team from './sections/Team'
 import Newsletter from './sections/Newsletter'
 
 const Home = () => {
+  useEffect(() => {
+    document.title = 'Home';
+  });
+
   return (
     <div>
       <Slider />

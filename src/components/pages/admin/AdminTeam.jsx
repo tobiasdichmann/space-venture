@@ -14,6 +14,10 @@ import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { GrAdd } from "react-icons/gr";
 
 const AdminGallery = () => {
+  useEffect(() => {
+    document.title = 'Team';
+  });
+
   const [team, setTeam] = useState(); // Data/Text that the user can edit
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/admin/adminteamcreate.scss";
 
 // API-CALL
@@ -10,6 +10,10 @@ import ErrorComp from "../../ErrorComp";
 import Popup from "../../Popup";
 
 const AdminToursCreate = () => {
+  useEffect(() => {
+    document.title = 'Team';
+  });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 

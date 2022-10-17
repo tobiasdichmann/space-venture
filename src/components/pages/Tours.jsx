@@ -15,6 +15,10 @@ import Pagination from "../Pagination";
 import BannerTours from '../../assets/img/banner-ture.jpg';
 
 const Tours = () => {
+  useEffect(() => {
+    document.title = 'Ture';
+  });
+
   const [tours, setTours] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

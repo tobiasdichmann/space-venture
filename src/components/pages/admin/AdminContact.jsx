@@ -13,6 +13,10 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { BiMailSend } from "react-icons/bi";
 
 const AdminTours = () => {
+  useEffect(() => {
+    document.title = 'Kontakt';
+  });
+
   const [userMessage, setUserMessage] = useState(); // Data/Text that the user can edit
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

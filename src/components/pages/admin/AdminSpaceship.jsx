@@ -14,6 +14,10 @@ import Editor from "ckeditor5-custom-build/build/ckeditor";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 
 const AdminSpacecraft = () => {
+  useEffect(() => {
+    document.title = 'Rumfærgen';
+  });
+
   const [spacecraft, setSpacecraft] = useState(); // Data/Text that the user can edit
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

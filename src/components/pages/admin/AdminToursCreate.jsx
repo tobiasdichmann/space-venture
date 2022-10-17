@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/admin/admintourscreate.scss";
 
 // API-CALL
@@ -14,6 +14,10 @@ import Editor from "ckeditor5-custom-build/build/ckeditor";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 
 const AdminToursCreate = () => {
+  useEffect(() => {
+    document.title = 'Ture';
+  });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 

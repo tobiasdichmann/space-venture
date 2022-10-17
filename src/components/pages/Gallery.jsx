@@ -20,6 +20,10 @@ import Image11 from '../../assets/img/galleri/11.jpg';
 import Image12 from '../../assets/img/galleri/12.jpg';
 
 const Rumfærgen = () => {
+  useEffect(() => {
+    document.title = 'Galleri';
+  });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
